@@ -31,7 +31,7 @@ class Solution:
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    str = 'VI'
+    str = 'MCMLXXI'
     print("Converting: ", str)
     solution = Solution;
     print(solution.romanToInt(solution, str))
