@@ -7,34 +7,31 @@ class ListNode:
 class Solution:
     def isPalindrome(self, head: [ListNode]) -> bool:
 
-        list_len = len(head)
-        print(list_len)
+        list_len = 0
+        mylist = []
+
+        while (head):
+            list_len += 1
+            mylist.append(head.val)
+            head = head.next
 
         midpoint = int(list_len / 2)
 
-        print("mid:", midpoint)
-        if (midpoint % 2) == 0:
-            # number is even
-            print("even")
-
-        check_against = list_len-1
+        check_against = list_len - 1
 
         # assume true until proven false
         is_palindrome = True
 
         for i in range(midpoint):
-            # debug: print("checking if:", head[i], "==", head[check_against])
-            if (head[i]!=head[check_against]):
+            if (mylist[i] != mylist[check_against]):
                 is_palindrome = False
                 break
             check_against -= 1
 
-        return(is_palindrome)
-
+        return (is_palindrome)
 if __name__ == '__main__':
 
     test_ll = ListNode
-    test_ll = [1,1,1,1,1,2,6,2,1,1,1,1,1]
 
     print("Checking: ", test_ll)
     solution = Solution;
